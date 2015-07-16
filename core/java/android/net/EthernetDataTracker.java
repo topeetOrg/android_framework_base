@@ -112,10 +112,14 @@ public class EthernetDataTracker implements NetworkStateTracker {
 	
 	private void acquireWakeLock(Context context) {
 		if (mWakeLock == null) {
+
+/*  remove by cym 20150710 for system deep sleep
+
 			PowerManager pm = (PowerManager)context.getSystemService(Context.POWER_SERVICE);
 			mWakeLock = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK,"USB Ether");
 			mWakeLock.acquire();
 			Log.d(TAG,"acquireWakeLock USB Ether");
+*/
 		}
 	}
 	private void releaseWakeLock() {
